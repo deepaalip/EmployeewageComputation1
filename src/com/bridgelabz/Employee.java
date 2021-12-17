@@ -11,12 +11,15 @@ public class Employee {
 		
  	   
  		 	 final int empcheck =((int) Math.floor(Math.random() * 10) % 2);
- 		 	if ( empcheck == IS_FULLTIME )
+ 		 	if ( empcheck == IS_FULLTIME ) 
  		       System.out.println("Employee is Present");
- 		 else
+ 		 	
+ 		 	
+ 		 else {
  		       System.out.println("Employee is Abscent");
- 		 }
+ 		 	}
             
 	} 
 	  
      
+}
