@@ -7,8 +7,10 @@ public class Employee {
 		final int EMP_RATE_PER_HOUR =20;
 	     int emphrs = 0;
 	     int empwage = 0;
+	   final int  NO_OF_WORKING_DAYS=20;
 		System.out.println("Welcome To Employee Wage Computation Program");
-		
+		int totalempwage=0;
+	    for(int day = 0; day < NO_OF_WORKING_DAYS; day++){
  	   
  		 	 final int empcheck =((int) Math.floor(Math.random() * 10)) % 3;
  		 	switch (empcheck) {
@@ -24,10 +26,12 @@ public class Employee {
  	         System.out.println("Employee is Abscent");
            }
  		 	empwage = emphrs * EMP_RATE_PER_HOUR;
+ 		 	totalempwage += empwage;
  	       System.out.println("Emp Wage: " + empwage);
 	} 
-}
+	    System.out.println("Total Emp Wage: " + totalempwage);
+  }
 	
-	
+}	
 	
      
