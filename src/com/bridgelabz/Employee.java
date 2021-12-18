@@ -3,9 +3,22 @@ package com.bridgelabz;
 public class Employee {
 	public static final int IS_FULLTIME = 1;
 	public static final int IS_PARTTIME = 2;
+	 
 	
-	public static int computation_of_employee_wage (String company, int EMP_RATE_PER_HOUR, int NO_OF_WORKING_DAYS, int max_hrs_per_month){
+	private final String company;
+	private final int EMP_RATE_PER_HOUR;
+	private final int NO_OF_WORKING_DAYS ;
+	private final int max_hrs_per_month ;
+	
+	public Employee (String company, int EMP_RATE_PER_HOUR, int NO_OF_WORKING_DAYS, int max_hrs_per_month){
 		
+			this.company = company;
+			this.EMP_RATE_PER_HOUR = EMP_RATE_PER_HOUR;
+			this.NO_OF_WORKING_DAYS = NO_OF_WORKING_DAYS;
+			this.max_hrs_per_month = max_hrs_per_month;
+		}
+		
+		private int computation_of_employee_wage(){
 	     int emphrs = 0;
 	     int empwage = 0;
 	    int total_emp_hrs = 0;
@@ -35,7 +48,10 @@ public class Employee {
  		 	return totalempwage;
 	} 
 	  public static void main(String[] args) {
-		 int totalwage = computation_of_employee_wage("Dmart",20,2,10);
+		  Employee Dmart= new Employee ("Dmart",20,2,10);
+		  Employee Bigbasket= new Employee("Bigbasket",30,2,10);
+		  System.out.println("Total Emp Wage for the company : "+Dmart.company+ " is " + Dmart.computation_of_employee_wage());
+		  System.out.println("Total Emp Wage for the company : "+Bigbasket.company+ " is " + Bigbasket.computation_of_employee_wage());
 	  }
   
 	
